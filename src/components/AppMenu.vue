@@ -12,5 +12,11 @@
     >
       About
     </NuxtLink>
+    <NuxtLink
+      :to="{ name: 'projects' }"
+      class="font-mono p-1 hover:bg-gray-100"
+    >
+      Projects
+    </NuxtLink>
   </nav>
 </template>
