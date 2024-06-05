@@ -6,5 +6,9 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   modules: [
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
   ],
+  colorMode: {
+    classSuffix: '',
+  },
 })
