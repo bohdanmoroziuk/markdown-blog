@@ -1,5 +1,25 @@
+<script setup lang="ts">
+const { data: posts } = await useAsyncData(
+  'posts',
+  () => {
+    return queryContent('/blog')
+      .only(['_path', 'title'])
+      .find()
+  }
+)
+</script>
+
 <template>
-  <h1>
-    Blog post list
-  </h1>
+  <section>
+    <ul>
+      <li
+        v-for="post of posts"
+        :key="post._path"
+      >
+        <NuxtLink :to="post._path">
+          {{ post.title }}
+        </NuxtLink>
+      </li>
+    </ul>
+  </section>
 </template>
