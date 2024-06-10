@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <h2 class="text-2xl font-semibold mb-10">
-      Projects
-    </h2>
-    <ProjectList />
-  </div>
+  <article class="prose dark:prose-invert prose-h1:text-2xl">
+    <ContentDoc path="/projects" />
+  </article>
 </template>

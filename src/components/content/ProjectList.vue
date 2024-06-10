@@ -15,10 +15,7 @@ const projects = computed(() => {
 </script>
 
 <template>
-  <div>
-    <p class="mb-10">
-      Take a look at my GitHub projects!
-    </p>
+  <div class="not-prose">
     <div v-if="pending">
       Loading...
     </div>
