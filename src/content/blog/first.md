@@ -1,3 +1,7 @@
+---
+published_at: 2022-07-23
+---
+
 # First post on our website
 ## Introduction 
 This is some text. *This is italic*.
