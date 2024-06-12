@@ -1,5 +1,6 @@
 ---
 published_at: 2022-07-23
+toc: true
 ---
 
 # First post on our website
