@@ -9,22 +9,22 @@ const callback: IntersectionObserverCallback = (entries) => {
   }
 }
 
-onMounted(() => {
+onMounted(async () => {
   const observer = new IntersectionObserver(callback, {
     root: null,
     threshold: 0.5,
   })
 
-  const elements = document.querySelectorAll('h2, h3')
-
-  elements.forEach((element) => {
-    observer.observe(element)
-  })
+  setTimeout(() => {
+    document
+      .querySelectorAll('h2, h3')
+      .forEach((element) => {
+        observer.observe(element)
+      })
+  }, 500)
 
   onBeforeUnmount(() => {
-    elements.forEach((element) => {
-      observer.unobserve(element)
-    })
+    observer.disconnect()
   })
 })
 </script>
