@@ -42,28 +42,38 @@ onMounted(() => {
       max-w-none
     "
   >
-    <ContentDoc #default="{ doc }">
-      <div class="grid grid-cols-6 gap-16">
-        <div :class="[doc.toc ? 'col-span-4' : 'col-span-6']">
-          <ContentRenderer :value="doc" />
-        </div>
-        <div
-          v-if="doc.toc"
-          class="col-span-2 not-prose"
-        >
-          <div class="sticky top-8">
-            <h3 class="font-semibold mt-0 mb-2">
-              Table of Contents
-            </h3>
-            <nav>
-              <TocLinks
-                :links="doc.body.toc.links"
-                :active-id="activeId"
-              />
-            </nav>
+    <ContentDoc>
+      <template #default="{ doc }">
+        <div class="grid grid-cols-6 gap-16">
+          <div :class="[doc.toc ? 'col-span-4' : 'col-span-6']">
+            <ContentRenderer :value="doc" />
+          </div>
+          <div
+            v-if="doc.toc"
+            class="col-span-2 not-prose"
+          >
+            <div class="sticky top-8">
+              <h3 class="font-semibold mt-0 mb-2">
+                Table of Contents
+              </h3>
+              <nav>
+                <TocLinks
+                  :links="doc.body.toc.links"
+                  :active-id="activeId"
+                />
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
+      </template>
+      <template #not-found>
+        <h1>
+          404 Not found
+        </h1>
+        <p>
+          This blog post could not be found
+        </p>
+      </template>
     </ContentDoc>
   </article>
 </template>
