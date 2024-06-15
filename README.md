@@ -1,6 +1,8 @@
-# Nuxt 3 Minimal Starter
+# Markdown Blog
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+> Markdown-powered blog and portfolio built with Nuxt 3, Nuxt Content, TailwindCSS and TypeScript.
+
+[Live Preview](https://markdown-blog-phi-two.vercel.app)
 
 ## Setup
 
@@ -71,5 +73,7 @@ yarn preview
 # bun
 bun run preview
 ```
+
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
