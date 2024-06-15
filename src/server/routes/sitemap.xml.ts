@@ -2,10 +2,12 @@ import { serverQueryContent } from '#content/server'
 import { SitemapStream, streamToPromise } from 'sitemap'
 
 export default defineEventHandler(async (event) => {
+  const runtimeConfig = useRuntimeConfig()
+
   const docs = await serverQueryContent(event).find()
 
   const sitemap = new SitemapStream({
-    hostname: 'https://localhost:3000',
+    hostname: runtimeConfig.public.hostname,
   })
 
   for (const doc of docs) {

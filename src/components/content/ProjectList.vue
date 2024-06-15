@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { Project } from '~/types'
 
-const { error, pending, data } = await useFetch<Project[]>('https://api.github.com/users/bohdanmoroziuk/repos')
+const { error, pending, data } = await useFetch<Project[]>('https://api.github.com/users/bohdanmoroziuk/repos', {
+  lazy: true,
+})
 
 const projects = computed(() => {
   const list = data.value ?? []
