@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex items-center space-x-4 font-mono">
+  <nav class="flex flex-col md:flex-row md:items-center md:space-x-4 font-mono">
     <NuxtLink
       :to="{ name: 'index' }"
       class="link"
@@ -29,6 +29,6 @@
 
 <style scoped>
 .link {
-  @apply p-1 hover:bg-gray-200 dark:hover:bg-gray-800;
+  @apply p-1 hover:bg-gray-200 dark:hover:bg-gray-800 text-2xl md:text-base;
 }
 </style>

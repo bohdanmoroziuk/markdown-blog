@@ -45,12 +45,12 @@ onMounted(async () => {
     <ContentDoc>
       <template #default="{ doc }">
         <div class="grid grid-cols-6 gap-16">
-          <div :class="[doc.toc ? 'col-span-4' : 'col-span-6']">
+          <div :class="[doc.toc ? 'col-span-6 md:col-span-4' : 'col-span-6']">
             <ContentRenderer :value="doc" />
           </div>
           <div
             v-if="doc.toc"
-            class="col-span-2 not-prose"
+            class="hidden md:block md:col-span-2 not-prose"
           >
             <div class="sticky top-8">
               <h3 class="font-semibold mt-0 mb-2">
