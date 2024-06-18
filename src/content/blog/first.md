@@ -1,4 +1,6 @@
 ---
+title: First post on our website
+description: Meet my first blog post
 published_at: 2022-07-23
 toc: true
 ---

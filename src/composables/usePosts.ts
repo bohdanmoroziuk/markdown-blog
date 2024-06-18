@@ -1,3 +1,5 @@
+import type { Post } from '~/types'
+
 export interface UsePostsOptions {
   limit?: number
 }
@@ -6,7 +8,7 @@ export const usePosts = async ({ limit = Number.MAX_SAFE_INTEGER }: UsePostsOpti
   const { data: posts } = await useAsyncData(
     'posts',
     () => {
-      return queryContent('/blog')
+      return queryContent<Post>('/blog')
         .only(['_path', 'title', 'published_at'])
         .sort({ published_at: -1, })
         .limit(limit)

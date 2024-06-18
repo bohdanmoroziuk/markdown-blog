@@ -19,6 +19,12 @@ export default defineNuxtConfig({
         dark: 'min-dark',
       },
     },
+    markdown: {
+      toc: {
+        depth: 4,
+        searchDepth: 4,
+      },
+    },
   },
   app: {
     head: {
@@ -28,6 +34,15 @@ export default defineNuxtConfig({
           type: 'image/png',
           href: '/favicon.ico',
         },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com'
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
+          crossorigin: ''
+        }
       ],
     },
     pageTransition: {
@@ -47,4 +62,7 @@ export default defineNuxtConfig({
       hostname: process.env.HOSTNAME,
     },
   },
+  css: [
+    '~/assets/styles/global.css',
+  ],
 })

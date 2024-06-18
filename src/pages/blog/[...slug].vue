@@ -17,7 +17,7 @@ onMounted(async () => {
 
   setTimeout(() => {
     document
-      .querySelectorAll('h2, h3')
+      .querySelectorAll('h2, h3, h4')
       .forEach((element) => {
         observer.observe(element)
       })

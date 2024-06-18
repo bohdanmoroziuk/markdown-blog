@@ -9,6 +9,7 @@ head:
 published_at: 2024-06-10
 toc: true
 ---
+
 # Introduction to Vue 3
 
 ![Vue 3 Introduction](/images/vue-logo.png)
