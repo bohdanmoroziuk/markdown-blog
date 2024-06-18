@@ -19,6 +19,12 @@ export default defineNuxtConfig({
         dark: 'min-dark',
       },
     },
+    markdown: {
+      toc: {
+        depth: 4,
+        searchDepth: 4,
+      },
+    },
   },
   app: {
     head: {

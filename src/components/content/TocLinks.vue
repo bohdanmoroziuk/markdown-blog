@@ -18,13 +18,13 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <ul>
+  <ul :class="{ 'ml-4': level }">
     <li
       v-for="link of links"
       :key="link.id"
     >
       <NuxtLink
-        :class="{ 'ml-4': level, 'text-green-600 dark:text-green-400': activeId === link.id }"
+        :class="{ 'text-green-600 dark:text-green-400': activeId === link.id }"
         :to="{ path: $route.path, hash: `#${link.id}` }"
       >
         {{ link.text }}
