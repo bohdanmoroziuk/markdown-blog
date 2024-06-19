@@ -4,6 +4,8 @@ useHead({
 })
 
 const { copyrightText, menuLinks } = useAppConfig()
+
+const { iconName, toggle, } = useTheme()
 </script>
 
 <template>
@@ -13,7 +15,10 @@ const { copyrightText, menuLinks } = useAppConfig()
         <AppBrand />
         <AppMenu :links="menuLinks" />
       </div>
-      <ColorModeSwitch />
+      <ColorModeSwitch
+        :icon-name="iconName"
+        @toggle="toggle"
+      />
     </header>
     <main class="flex-1">
       <slot />
