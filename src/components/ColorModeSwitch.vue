@@ -14,7 +14,7 @@ defineEmits<Emits>()
 
 <template>
   <button
-    class="inline-flex"
+    class="inline-flex p-2"
     @click="$emit('toggle')"
   >
     <ColorScheme>
