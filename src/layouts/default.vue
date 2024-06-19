@@ -3,7 +3,7 @@ useHead({
   titleTemplate: '%s - Markdown Blog',
 })
 
-const { copyrightText } = useAppConfig()
+const { copyrightText, menuLinks } = useAppConfig()
 </script>
 
 <template>
@@ -11,7 +11,7 @@ const { copyrightText } = useAppConfig()
     <header class="flex items-start md:items-center justify-between">
       <div class="flex items-center md:space-x-12">
         <AppBrand />
-        <AppMenu />
+        <AppMenu :links="menuLinks" />
       </div>
       <ColorModeSwitch />
     </header>

@@ -1,28 +1,22 @@
+<script setup lang="ts">
+import type { MenuLink } from '~/types'
+
+interface Props {
+  links: MenuLink[]
+}
+
+defineProps<Props>()
+</script>
+
 <template>
   <nav class="flex flex-col md:flex-row md:items-center md:space-x-4 font-mono">
     <NuxtLink
-      :to="{ name: 'index' }"
+      v-for="link of links"
+      :key="link.label"
+      :to="link.to"
       class="link"
     >
-      Home
-    </NuxtLink>
-    <NuxtLink
-      :to="{ name: 'blog' }"
-      class="link"
-    >
-      Blog
-    </NuxtLink>
-    <NuxtLink
-      :to="{ name: 'projects' }"
-      class="link"
-    >
-      Projects
-    </NuxtLink>
-    <NuxtLink
-      :to="{ name: 'about' }"
-      class="link"
-    >
-      About
+      {{ link.label }}
     </NuxtLink>
   </nav>
 </template>
