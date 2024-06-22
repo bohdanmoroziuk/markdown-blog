@@ -1,11 +1,12 @@
 ---
-title: First post on our website
+title: First post ever
 description: Meet my first blog post
-published_at: 2022-07-23
+published_at: 2024-06-21
 toc: true
 ---
 
-# First post on our website
+# First post ever
+
 ## Introduction 
 This is some text. *This is italic*.
 
@@ -37,4 +38,4 @@ Tables:
 </html>
 ```
 
-[Go to the second article](/blog/second)
+[Go to the second post](/blog/2024/vue-3-introduction)

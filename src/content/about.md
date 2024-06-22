@@ -1,3 +1,3 @@
-# About me page content
+# About me
 
 Hello there!
