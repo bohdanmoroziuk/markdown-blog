@@ -1,34 +1,28 @@
+<script setup lang="ts">
+import type { MenuLink } from '~/types'
+
+interface Props {
+  links: MenuLink[]
+}
+
+defineProps<Props>()
+</script>
+
 <template>
-  <nav class="flex flex-col md:flex-row md:items-center md:space-x-4 font-mono">
+  <nav class="flex flex-col md:flex-row md:items-center md:space-x-4">
     <NuxtLink
-      :to="{ name: 'index' }"
+      v-for="link of links"
+      :key="link.label"
+      :to="link.to"
       class="link"
     >
-      Home
-    </NuxtLink>
-    <NuxtLink
-      :to="{ name: 'blog' }"
-      class="link"
-    >
-      Blog
-    </NuxtLink>
-    <NuxtLink
-      :to="{ name: 'projects' }"
-      class="link"
-    >
-      Projects
-    </NuxtLink>
-    <NuxtLink
-      :to="{ name: 'about' }"
-      class="link"
-    >
-      About
+      {{ link.label }}
     </NuxtLink>
   </nav>
 </template>
 
 <style scoped>
 .link {
-  @apply p-1 hover:bg-gray-200 dark:hover:bg-gray-800 text-2xl md:text-base;
+  @apply text-xl font-mono hover:bg-gray-200 dark:hover:bg-gray-800 px-2 py-1;
 }
 </style>

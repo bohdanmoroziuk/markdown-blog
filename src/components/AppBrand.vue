@@ -1,10 +1,8 @@
 <template>
-  <div class="hidden md:block">
-    <NuxtLink
-      :to="{ name: 'index' }"
-      class="text-xl font-semibold p-2 hover:bg-gray-200 dark:hover:bg-gray-800"
-    >
-      Markdown Blog
-    </NuxtLink>
-  </div>
+  <NuxtLink
+    :to="{ name: 'index' }"
+    class="text-2xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-800 p-2"
+  >
+    Markdown Blog
+  </NuxtLink>
 </template>

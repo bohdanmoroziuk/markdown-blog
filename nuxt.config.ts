@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxt/content',
+    '@nuxt/icon',
   ],
   colorMode: {
     classSuffix: '',
